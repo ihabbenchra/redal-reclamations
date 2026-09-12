@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-md-7">
+    <h2 class="mb-4">Traiter la réclamation</h2>
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title">{{ reclamation.titre }}</h5>
+        <p class="card-text">{{ reclamation.description }}</p>
+        <p class="text-muted mb-0">Auteur : {{ reclamation.nom_auteur }}</p>
+        <p class="text-muted">Déposée le {{ reclamation.dateCreation|date:"d/m/Y H:i" }}</p>
+      </div>
+    </div>
+    <form method="post">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label class="form-label">Statut</label>
+        {{ statut_form.statut }}
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Réponse</label>
+        {{ reponse_form.contenu }}
+      </div>
+      <button type="submit" class="btn btn-primary">Enregistrer</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
