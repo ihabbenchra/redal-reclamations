@@ -58,8 +58,8 @@ python manage.py runserver
 
 ## Comptes
 
-- S'inscrire en choisissant le rôle "Employé" pour déposer et suivre des réclamations.
-- S'inscrire en choisissant le rôle "Technicien" pour traiter les réclamations.
+- Deux formulaires d'inscription : un pour l'employé, un pour le technicien.
+- Technicien : code d'invitation obligatoire.
 
 ## Configuration base de données (optionnel)
 

@@ -27,7 +27,8 @@ input[type=text], input[type=password], input[type=email], textarea, select {
         </form>
       {% else %}
         <a class="btn btn-outline-light btn-sm me-2" href="{% url 'connexion' %}">Connexion</a>
-        <a class="btn btn-light btn-sm" href="{% url 'inscription' %}">Inscription</a>
+        <a class="btn btn-light btn-sm me-2" href="{% url 'inscription_employe' %}">Inscription Employé</a>
+        <a class="btn btn-light btn-sm" href="{% url 'inscription_technicien' %}">Inscription Technicien</a>
       {% endif %}
     </div>
   </div>

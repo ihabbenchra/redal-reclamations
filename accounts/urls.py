@@ -3,7 +3,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('inscription/', views.inscription, name='inscription'),
-    path('connexion/', auth_views.LoginView.as_view(template_name='accounts/connexion.html'), name='connexion'),
+    path('inscription/employe/', views.inscription_employe, name='inscription_employe'),
+    path('inscription/technicien/', views.inscription_technicien, name='inscription_technicien'),
+    path('connexion/', views.ConnexionView.as_view(), name='connexion'),
     path('deconnexion/', auth_views.LogoutView.as_view(next_page='connexion'), name='deconnexion'),
 ]
